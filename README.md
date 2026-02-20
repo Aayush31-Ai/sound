@@ -1,0 +1,84 @@
+# Sound Describer 🎧
+
+Describe an action (e.g., "Dragon breathing fire") to get a text description of exactly how that sound should feel and sound.
+
+## Features
+
+- 🔊 Turns actions, scenes, and events into vivid sound descriptions
+- 🧠 Includes both how the sound behaves and how it physically/emotionally feels
+- 🧱 Uses a structured format for consistent output
+- 💬 Supports follow-up questions for deeper sound design guidance
+- ⚡ Powered by Groq via the OpenAI-compatible SDK
+- 🔑 No backend required — runs in the browser
+
+## Tech Stack
+
+- [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [OpenAI SDK](https://www.npmjs.com/package/openai) (pointed at Groq's API)
+- [Groq API](https://console.groq.com/) — model: `openai/gpt-oss-20b`
+
+## Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone <your-repo-url>
+cd sound
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up your API key
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_GROK_API_KEY=your_groq_api_key_here
+```
+
+Get your free API key at [console.groq.com](https://console.groq.com/).
+
+### 4. Run the dev server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure
+
+```
+sound/
+├── public/
+├── src/
+│   ├── App.jsx       # Main chat component + sound description logic
+│   ├── App.css       # Chat UI styles
+│   ├── main.jsx      # React entry point
+│   └── index.css     # Global styles
+├── .env              # API key (not committed to git)
+├── .gitignore
+├── index.html
+├── package.json
+├── requirements.txt
+└── vite.config.js
+```
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_GROK_API_KEY` | Your Groq API key (get it from [console.groq.com](https://console.groq.com/)) |
+
+> **Note:** Never commit your `.env` file. It is already added to `.gitignore`.
